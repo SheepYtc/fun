@@ -3,8 +3,8 @@
       <div class="wrapper">
         <div class="block">
           <publichomenav :title="title"></publichomenav>
-            <van-collapse v-model="activeNames" v-for="(item,index) in newactions" :key="index">
-              <van-collapse-item :title="item.name"  name="1">
+            <van-collapse  v-model="activeNames" v-for="(item,index) in newactions" :key="index">
+              <van-collapse-item disabled :title="item.name"  name="1">
                 <div class="result_Total">
                   <span>对0条</span>
                   <el-divider class="divider" direction="vertical"></el-divider>

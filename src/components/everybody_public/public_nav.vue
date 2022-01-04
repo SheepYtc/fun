@@ -18,7 +18,7 @@
 <van-button class="report" type="info" block round @click="close_sheet">查看结果报表</van-button>
   </van-action-sheet>
   <!-- //查看报表 -->
-      <van-overlay :show="show" @click="show = false">
+      <van-overlay :lock-scroll="false" :show="show" @click="show = false">
       <div class="wrapper">
         <div class="block"  @click.stop>
           <van-cell>
@@ -26,8 +26,8 @@
                 对错数据统计
             </div>
           </van-cell>
-            <van-collapse v-model="activeNames" v-for="(item,index) in newactions" :key="index">
-              <van-collapse-item :title="item.name" name="0"  size="26px">
+            <van-collapse  v-model="activeNames" v-for="(item,index) in newactions" :key="index">
+              <van-collapse-item disabled :title="item.name" name="0"  size="26px">
                 <div class="result_Total">
                   <span>对0条</span>
                   <el-divider class="divider" direction="vertical"></el-divider>
@@ -135,7 +135,9 @@ import {mapState} from "vuex"
   .block {
     width: 350px;
     height: 400px;
-    overflow: auto;
+    // overflow: hidden;
+
+  overflow-y: auto;
     // height: -450px;
     background-color: #fff;
  
