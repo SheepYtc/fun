@@ -1,32 +1,61 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="box">     
+      <!-- //入口 -->
+      <!-- <Home></Home> -->
+      <transition name="test">
+       <router-view></router-view>
+      </transition>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Home from '@/views/Home.vue'
+  export default {
+  components: { Home },
+    
   }
-}
+</script>
+
+<style lang="less" scoped>
+
+//路由动画
+// .test-enter{
+//   transform: translateX(100%);
+// }
+
+// .test-enter-to{
+//   transform: translateX(0);
+
+// }
+// .test-enter-active{
+
+//   // position: absolute;
+//   transition: all ease-in 0.8s;
+// }
+// .test-leave{
+//   transform: translateX(0);
+
+// }
+// .test-leave-to{
+//   transform: translateX(100%);
+// }
+
+// .test-leave-active{
+//       // position: absolute;
+//   transition: all ease-in 0.5s;
+
+
+// }
+
+  *{
+    margin: 0;
+    padding: 0;
+    // color: black;
+    list-style: none;
+  }
+
+  .box{
+    margin: 0 auto;
+    max-width: 100%;
+  }
 </style>
