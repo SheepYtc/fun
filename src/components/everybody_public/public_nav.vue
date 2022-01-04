@@ -134,11 +134,9 @@ import {mapState} from "vuex"
   }
   .block {
     width: 350px;
-    height: 400px;
+    height: 410px;
     // overflow: hidden;
-
-  overflow-y: auto;
-    // height: -450px;
+    overflow-y: auto;
     background-color: #fff;
  
     .result_Total{
