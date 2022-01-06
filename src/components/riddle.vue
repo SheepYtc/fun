@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     getaxiosdata() {
-      this.axios.get('http://api.tianapi.com/zimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c').then(({ data }) => {
+      this.axios.get('https://api.tianapi.com/zimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c').then(({ data }) => {
         this.list = data.newslist[this.index]
         console.log(data.newslist[0], 'data')
       })

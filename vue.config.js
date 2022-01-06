@@ -17,4 +17,16 @@ module.exports = {
     //     }
     //   }
     // }
+    // devServer: {
+    //     proxy: {
+    //         '/api': {
+    //             target: "", //接口地址：http://v.juhe.cn/chengyu/query
+    //             changeOrigin: true,
+    //             ws: true,
+    //             pathRewrite: {
+    //                 "^/api": "" //调用时，用'/api'代替target里面的地址
+    //             }
+    //         }
+    //     }
+    // }
 }

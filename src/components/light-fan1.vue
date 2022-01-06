@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     getaxiosdata() {
-      this.axios.get('http://api.tianapi.com/caizimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c').then(({ data }) => {
+      this.axios.get('https://api.tianapi.com/caizimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c').then(({ data }) => {
         this.list.answer = data.newslist[this.index].answer
         this.list.content = data.newslist[this.index].riddle
         this.list.reason = data.newslist[this.index].description
