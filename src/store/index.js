@@ -9,48 +9,78 @@ export default new Vuex.Store({
                 "name": "猜字谜",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/b846158bc08e7bce.png",
                 "to": "/riddle",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             },
             {
                 "name": "猜成语",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/60aec93809f288a2.png",
                 "to": "/idiom",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "猜灯谜",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/b74cd7e66a06dfec.png",
                 "to": "/light-fan",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "猜灯谜",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/b74cd7e66a06dfec.png",
                 "to": "/light-fan1",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "歇后语",
-                "url": "https://s3.bmp.ovh/imgs/2021/12/589f5626a8fe033e.png",
+
+                "url": "https://s3.bmp.ovh/imgs/2021/12/ea2deb2356e68fcf.png",
                 "to": "/riddleDa",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "谜语大全",
-                "url": "https://s3.bmp.ovh/imgs/2021/12/39e2254d9649a68c.png",
+                "url": "https://s3.bmp.ovh/imgs/2021/12/589f5626a8fe033e.png",
+
                 "to": "/Brain-Twister",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "文化谚语",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/4bc974df2b9b1f06.png",
                 "to": "/Cultural-prover",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "成语接龙",
                 "url": "https://s3.bmp.ovh/imgs/2021/12/0109977739d37deb.png",
                 "to": "/idioms-solitaire",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }, {
                 "name": "脑筋急转弯",
-                "url": "https://s3.bmp.ovh/imgs/2021/12/ea2deb2356e68fcf.png",
+                "url": "https://s3.bmp.ovh/imgs/2021/12/39e2254d9649a68c.png",
+
                 "to": "/RestYu",
-                "disabled": false
+                "count": {
+                    "dui": 0,
+                    "cuo": 0
+                }
             }
         ]
     },

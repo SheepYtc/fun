@@ -29,9 +29,9 @@
             <van-collapse  v-model="activeNames" v-for="(item,index) in newactions" :key="index">
               <van-collapse-item disabled :title="item.name" name="0"  size="26px">
                 <div class="result_Total">
-                  <span>对0条</span>
+                  <span>对{{item.count.dui}}条</span>
                   <el-divider class="divider" direction="vertical"></el-divider>
-                  <span>错0条</span>
+                  <span>错{{item.count.cuo}}条</span>
                 </div>
               </van-collapse-item>
             </van-collapse>
@@ -69,7 +69,7 @@ import {mapState} from "vuex"
         if(this.$route.path === Action.to){
         this.$toast({
           message: '您选择的已是当前页面',
-          icon: 'https://s3.bmp.ovh/imgs/2022/01/fe465aa1bfd86717.jpg',
+          icon: 'https://s3.bmp.ovh/imgs/2022/01/f47b039587ad84f8.png',
         });
         }
         // 选择谁就跳到对应的路由
@@ -146,6 +146,7 @@ import {mapState} from "vuex"
       // justify-content: center;
       color: black;
       font-size: 16px;
+      letter-spacing: 5px;
       :nth-child(1){
         color: #27ae60;
       }

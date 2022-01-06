@@ -6,9 +6,9 @@
             <van-collapse  v-model="activeNames" v-for="(item,index) in newactions" :key="index">
               <van-collapse-item disabled :title="item.name"  name="1">
                 <div class="result_Total">
-                  <span>对0条</span>
+                  <span>对{{item.count.dui}}条</span>
                   <el-divider class="divider" direction="vertical"></el-divider>
-                  <span>错0条</span>
+                  <span>错{{item.count.cuo}}条</span>
                 </div>
               </van-collapse-item>
             </van-collapse>
@@ -76,6 +76,7 @@ import publichomenav from "@/components/everybody_public/public_home_nav.vue"
       // justify-content: center;
       color: black;
       font-size: 16px;
+      letter-spacing: 5px;
       :nth-child(1){
         color: #27ae60;
       }
