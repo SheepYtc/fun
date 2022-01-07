@@ -7,20 +7,34 @@
         <!-- 下一条按钮 -->
         <van-button icon="replay" style="float: right;  margin-top: -3px;" size="small" round type="info" :disabled="isnetxt" @click="hendlnext">下一条</van-button>
         <!-- 题目和type -->
-        <van-cell class="cell" :border="false" :title="list.content" :value="list.type">
-        </van-cell>
+        <div>
+          <van-cell class="cell" :border="false" :title="list.content" :value="list.type" v-show="list.content != ''">
+          </van-cell>
+          <van-cell v-show="list.content == ''">
+            <h3>今日游戏已上限，注意休息，改日再来！</h3>
+          </van-cell>
+        </div>
+
         <!-- 查看答案 -->
         <div class="showbutton">
-          <h2>答案：<span v-text="answer"></span></h2>
+          <h2>答案：
+            <span v-text="answer"></span>
+          </h2>
           <van-switch inactive-color="#333" v-model="checked" :disabled="!checked" size="20px" @change="answershow" />
         </div>
         <!--答对的描述  -->
+
         <div class="describe" v-show="!checked">
-          <van-divider :style="{ color: '#95a5a6', borderColor: '#34495e'}" content-position="left">描述</van-divider>
-          <div>
+          <div v-show="list.reason != ''">
+            <van-divider :style="{ color: '#95a5a6', borderColor: '#34495e'}" content-position="left">描述</van-divider>
             {{list.reason}}
           </div>
+          <div v-show="list.study != ''">
+            <van-divider :style="{ color: '#95a5a6', borderColor: '#34495e'}" content-position="left">例句</van-divider>
+            {{list.study}}
+          </div>
         </div>
+
       </div>
       <!-- 对错按钮 -->
       <div class="resultbutton">
@@ -123,11 +137,11 @@ export default {
     this.newactions.map(item => {
       if (item.name === this.title) {
         this.count = item.count
-        // console.log(item.count);
         // console.log(this.list, 'this.list')
       }
     })
     // console.log(this.title,"title");
+    console.log(this.list.content)
   },
   methods: {
     //遮罩层返回首页
@@ -162,10 +176,19 @@ export default {
     },
     //查看答案
     answershow() {
+      //次数没了，不能显示答案
+      if (this.list.content === '') {
+        this.checked = true
+      }
       //  this.checked = !this.checked
       if (this.checked === false) {
         //显示答案
-        this.answer = this.list.answer
+        if (this.list.pinyin != undefined) {
+          this.answer = this.list.answer + ' ' + this.list.pinyin
+        } else {
+          this.answer = this.list.answer
+        }
+
         //对的状态
         this.issuccess = false
         // 错的状态
@@ -324,9 +347,16 @@ export default {
     padding: 0px 10px 0px -5px;
     margin-top: 15px;
     align-items: center;
+
     .van-switch {
       margin-right: 10px;
       // padding: -10px 30px;
+    }
+    h2 {
+      width: 251px;
+      :nth-child(1) {
+        font-size: 16px;
+      }
     }
   }
   .resultbutton {
@@ -339,7 +369,7 @@ export default {
     }
   }
   .describe {
-    :nth-child(2) {
+    div {
       font-size: 15px;
       letter-spacing: 3px;
     }

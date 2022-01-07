@@ -23,7 +23,8 @@ export default {
         //解释
         reason: '',
         //类型
-        type: ''
+        type: '',
+        study: ''
         //         answer: "冥"
         // content: "小六巧用日当头，宝盖去点顶上走"
         // reason: "从谜面上看，关键词为：六、日、冖（宝盖头“宀”去点）；将它们组合起来即为“冥”。"
@@ -36,17 +37,16 @@ export default {
     this.getaxiosdata()
   },
   methods: {
-    getaxiosdata() {
-      this.axios.get('https://api.tianapi.com/caizimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c').then(({ data }) => {
-        this.list.answer = data.newslist[this.index].answer
-        this.list.content = data.newslist[this.index].riddle
-        this.list.reason = data.newslist[this.index].description
-        this.list.type = data.newslist[this.index].type
-        console.log(this.list.content, 'data')
-        console.log(this.list, 'data')
+    async getaxiosdata() {
+      const { data } = await this.axios.get('https://api.tianapi.com/caizimi/index?key=e58b55d2ff6f695d8f5ad68674332c5c')
+      this.list.answer = data.newslist[this.index].answer
+      this.list.content = data.newslist[this.index].riddle
+      this.list.reason = data.newslist[this.index].description
+      this.list.type = data.newslist[this.index].type
+      console.log(this.list.content, 'data')
+      console.log(this.list, 'data')
 
-        // console.log(this.list.answer, 'this.list.answer')
-      })
+      // console.log(this.list.answer, 'this.list.answer')
       // console.log(666)
     }
   },
