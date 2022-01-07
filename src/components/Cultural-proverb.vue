@@ -36,7 +36,7 @@ export default {
       const { data } = await this.axios.get('https://api.tianapi.com/proverb/index?key=e58b55d2ff6f695d8f5ad68674332c5c')
       this.list.content = data.newslist[this.index].front
       this.list.answer = data.newslist[this.index].behind
-      console.log(data)
+      // console.log(data)
     }
   },
   components: {

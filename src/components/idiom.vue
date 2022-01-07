@@ -48,7 +48,7 @@ export default {
       this.list.content = data.newslist[this.index].question
       this.list.reason = data.newslist[this.index].source
       this.list.study = data.newslist[this.index].study
-      console.log(data)
+      // console.log(data)
     }
   },
   components: {

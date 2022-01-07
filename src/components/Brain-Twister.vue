@@ -36,7 +36,7 @@ export default {
       this.list.answer = data.newslist[this.index].answer
       // this.list.type = data.newslist[0].quest
       this.list.content = data.newslist[this.index].quest
-      console.log(data)
+      // console.log(data)
       //lastIndexOf()返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
       // var index = this.list.type.lastIndexOf('（')
       // // var index1 = this.list.type.lastIndexOf('提')

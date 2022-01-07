@@ -37,7 +37,7 @@ export default {
       this.list.answer = data.newslist[this.index].result
       // console.log(this.list.answer)
       // console.log(this.list.content)
-      console.log(data)
+      // console.log(data)
     }
   },
   components: {

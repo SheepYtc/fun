@@ -37,7 +37,7 @@ export default {
       this.list.reason = data.newslist[this.index].reason
       this.list.type = data.newslist[this.index].content
       this.list.content = data.newslist[this.index].content
-      console.log(data)
+      // console.log(data)
       //lastIndexOf()返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。
       const index = this.list.type.lastIndexOf('(')
       //开始和结束的位置，从零开始的索引

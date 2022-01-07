@@ -43,8 +43,8 @@ export default {
       this.list.content = data.newslist[this.index].riddle
       this.list.reason = data.newslist[this.index].description
       this.list.type = data.newslist[this.index].type
-      console.log(this.list.content, 'data')
-      console.log(this.list, 'data')
+      // console.log(this.list.content, 'data')
+      // console.log(this.list, 'data')
 
       // console.log(this.list.answer, 'this.list.answer')
       // console.log(666)

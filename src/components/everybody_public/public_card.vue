@@ -141,13 +141,13 @@ export default {
       }
     })
     // console.log(this.title,"title");
-    console.log(this.list.content)
+    // console.log(this.list.content)
   },
   methods: {
     //遮罩层返回首页
     handelreturn() {
       this.overlayshow = false
-      console.log(this.issuccess, 'fanhui')
+      // console.log(this.issuccess, 'fanhui')
     },
     //换题目
     Change_title() {
